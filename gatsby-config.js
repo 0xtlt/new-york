@@ -1,6 +1,6 @@
 require("dotenv").config({
-    path: `.env.development`,
-});
+    path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
     siteMetadata: {
