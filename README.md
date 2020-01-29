@@ -17,7 +17,7 @@ Un compte chez Prismic.io est obligatoire pour le fonctionnement de ce template.
     gatsby new mon-gatsby https://github.com/ThomasT404/new-york
     ```
     
-2.  **Les prés-requis :**
+2.  **Les prérequis :**
 
     À la racine du dossier, il vous faudra créer un fichier `.env.development` qui contiendra les informations de connexion à votre projet prismic.
     
