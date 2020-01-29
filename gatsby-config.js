@@ -7,6 +7,7 @@ module.exports = {
         title: `New-York`,
         description: ``,
         author: `@thomast_404`,
+        url: `https://new-york-with-gatsby.netlify.com`
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
