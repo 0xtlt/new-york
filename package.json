@@ -10,7 +10,6 @@
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
-    "gatsby-plugin-prismic-preview": "^2.0.0",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-plugin-styled-components": "^3.1.18",
@@ -31,6 +30,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "start-wifi": "gatsby develop -H 0.0.0.0 -p 8000",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ThomasT404/new-york"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

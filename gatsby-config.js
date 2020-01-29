@@ -22,11 +22,11 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
-                short_name: `starter`,
+                name: `gatsby-demo-new-york`,
+                short_name: `new-york`,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
+                background_color: `#cfcbc8`,
+                theme_color: `#cfcbc8`,
                 display: `minimal-ui`,
                 icon: `src/images/gatsby-icon.png`,
             },
@@ -40,14 +40,6 @@ module.exports = {
                 },
                 repositoryName: process.env.PRISMIC_REPO,
                 accessToken: process.env.PRISMIC_TOKEN
-            }
-        },
-        {
-            resolve: 'gatsby-plugin-prismic-preview',
-            options: {
-                repositoryName: process.env.PRISMIC_REPO,
-                linkResolver: require('./src/linkResolver'),
-                path: '/preview',
             }
         }
     ],
