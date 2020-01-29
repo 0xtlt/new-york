@@ -28,7 +28,7 @@ module.exports = {
                 background_color: `#663399`,
                 theme_color: `#663399`,
                 display: `minimal-ui`,
-                icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+                icon: `src/images/gatsby-icon.png`,
             },
         },
         `gatsby-plugin-styled-components`,
@@ -38,12 +38,17 @@ module.exports = {
                 schemas: {
                     page: require('./src/schemas/page.json')
                 },
-                repositoryName: process.env.PRISMIC_REPO, // (REQUIRED, replace with your own)
-                accessToken: process.env.PRISMIC_TOKEN // (optional API access token)
+                repositoryName: process.env.PRISMIC_REPO,
+                accessToken: process.env.PRISMIC_TOKEN
             }
         },
-        // this (optional) plugin enables Progressive Web App + Offline functionality
-        // To learn more, visit: https://gatsby.dev/offline
-        // `gatsby-plugin-offline`,
+        {
+            resolve: 'gatsby-plugin-prismic-preview',
+            options: {
+                repositoryName: 'gatsby-source-prismic-test-site',
+                linkResolver: require('./src/linkResolver'),
+                path: '/preview',
+            }
+        }
     ],
-}
+};
