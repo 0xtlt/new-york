@@ -14,6 +14,13 @@ const Wrapper = styled.div`
         height: 500px;
         filter: grayscale(100%);
     }
+    
+    @media (max-width: 1024px) {
+        margin-top: 50px;
+        .gatsby-image-wrapper {
+            height: 350px;
+        }
+    }
 `;
 
 const BigTitle = styled.h2`
@@ -22,6 +29,11 @@ const BigTitle = styled.h2`
     line-height: 120%;
     margin-top: 25px;
     margin-bottom: 0;
+    
+    @media (max-width: 1024px) {
+        max-width: 85%;
+        font-size: 2em;
+    }
 `;
 
 const LittleTitle = styled.h4`

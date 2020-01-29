@@ -6,12 +6,23 @@ import PageWrapper from "../styles/pageWrapper";
 const Wrapper = styled.div`
     display: flex;
     margin-top: 100px;
+    
+    @media (max-width: 1024px) {
+       margin-top: 30px;
+       flex-wrap: wrap;
+    }
 `;
 
 const Content = styled.div`
     width: calc(40% - 100px);
     margin-right: 100px;
     font-size: 1.1em;
+    
+    @media (max-width: 1024px) {
+        width: 100%;
+        font-size: 1em;
+        margin-right: 0;
+    }
 `;
 
 const Gallery = styled.div`
@@ -33,6 +44,12 @@ const Gallery = styled.div`
         &:last-child {
             grid-area: top;
         }
+    }
+    
+    @media (max-width: 1024px) {
+        width: 100%;
+        grid-template-rows: 150px 150px;
+        grid-gap: 15px;
     }
 `;
 

@@ -4,6 +4,10 @@ import styled from "styled-components";
 const Wrapper = styled.div`
     margin-top: 100px;
     background: #111111;
+    
+    @media (max-width: 1024px) {
+       margin-top: 50px;
+    }
 `;
 
 const Spacer = styled.div`
@@ -20,17 +24,29 @@ const LeftTitle = styled.h4`
     color: white;
     font-size: 2.4em;
     margin: 0;
+
+    @media (max-width: 1024px) {
+       font-size: 1.1em;
+    }
 `;
 
 const RightText = styled.h4`
     color: white;
     font-size: 2.4em;
     margin: 0;
+    
+    @media (max-width: 1024px) {
+       font-size: 1.1em;
+    }
 `;
 
 const LittleText = styled.p`
     color: white;
     margin: 0;
+    
+    @media (max-width: 1024px) {
+       font-size: .7em;
+    }
 `;
 
 const FooterWrapper = styled.div`
@@ -40,6 +56,11 @@ const FooterWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin: auto;
+    
+    @media (max-width: 1024px) {
+       padding: 15px;
+       min-height: 100px;
+    }
 `;
 
 function Footer({data}) {

@@ -17,6 +17,21 @@ const DoubleImages = styled.div`
             margin-left: 20px;
         }
     }
+    
+    @media (max-width: 1024px) {
+        flex-wrap: wrap;
+        
+        .gatsby-image-wrapper {
+            height: 200px;
+            width: 80%;
+            
+            &:last-child {
+                width: 80%;
+                margin-top: 15px;
+                margin-left: 20%;
+            }
+        }
+    }
 `;
 
 const Title = styled.h2`
@@ -24,6 +39,11 @@ const Title = styled.h2`
     width: 65%;
     line-height: 120%;
     margin-top: 25px;
+    
+    @media (max-width: 1024px) {
+        font-size: 1.75em;
+        width: 85%;
+    }
 `;
 
 function Flash({data}) {
