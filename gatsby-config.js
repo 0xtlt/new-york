@@ -45,7 +45,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-prismic-preview',
             options: {
-                repositoryName: 'gatsby-source-prismic-test-site',
+                repositoryName: process.env.PRISMIC_REPO,
                 linkResolver: require('./src/linkResolver'),
                 path: '/preview',
             }
