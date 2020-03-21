@@ -33,7 +33,7 @@ const PreviewPage = ({ location }) => {
   if (isPreview === false) return <div>Not a preview!</div>
 
   return prevData ? (
-    prevData.prismicPost ? (
+    prevData.prismicPage ? (
       <PageTemplate data={prevData.prismicPost} />
     ) : (
       <div>error...</div>
