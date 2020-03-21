@@ -41,10 +41,6 @@ module.exports = {
         },
         repositoryName: process.env.PRISMIC_REPO,
         accessToken: process.env.PRISMIC_TOKEN,
-        shouldDownloadImage: ({ node, key, value }) => {
-          // Return true to download the image or false to skip.
-          return true
-        },
       },
     },
   ],
