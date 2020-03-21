@@ -47,7 +47,7 @@ export default ({ data }) => {
       <SEO
         title={HEADERS.page_title.text}
         description={HEADERS.page_description.text}
-        cardimg={HEADERS.page_thumbnail.localFile.publicURL}
+        cardimg={HEADERS.page_thumbnail.fixed.src}
         lang={"fr"}
       />
       {DTA.map((mod, index) => switchCase(mod, index))}
@@ -66,8 +66,8 @@ export const query = graphql`
           text
         }
         page_thumbnail {
-          localFile {
-            publicURL
+          fixed(width: 1920) {
+            src
           }
         }
         page_description {
@@ -91,33 +91,21 @@ export const query = graphql`
             slice_type
             primary {
               second_picture {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                  }
+                fluid(maxWidth: 500) {
+                  ...GatsbyPrismicImageFluid
                 }
               }
               left_text {
                 html
               }
               last_one {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                  }
+                fluid(maxWidth: 500) {
+                  ...GatsbyPrismicImageFluid
                 }
               }
               first_picture {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                  }
+                fluid(maxWidth: 500) {
+                  ...GatsbyPrismicImageFluid
                 }
               }
             }
@@ -146,21 +134,13 @@ export const query = graphql`
             slice_type
             primary {
               right_picture {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                  }
+                fluid(maxWidth: 500) {
+                  ...GatsbyPrismicImageFluid
                 }
               }
               left_picture {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                  }
+                fluid(maxWidth: 500) {
+                  ...GatsbyPrismicImageFluid
                 }
               }
               description_title {
@@ -191,12 +171,8 @@ export const query = graphql`
                 text
               }
               picture {
-                localFile {
-                  childImageSharp {
-                    fluid(maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid_tracedSVG
-                    }
-                  }
+                fluid(maxWidth: 900) {
+                  ...GatsbyPrismicImageFluid
                 }
               }
               description {
