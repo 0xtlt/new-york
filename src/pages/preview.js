@@ -34,9 +34,9 @@ const PreviewPage = ({ location }) => {
 
   return prevData ? (
     prevData.prismicPage ? (
-      <PageTemplate data={prevData.prismicPage} />
+      "Hello world"
     ) : (
-      <div>error... code: `{JSON.stringify(prevData)}`</div>
+      <div>error..</div>
     )
   ) : (
     <div>Loading preview...</div>
