@@ -34,7 +34,7 @@ const PreviewPage = ({ location }) => {
 
   return prevData ? (
     prevData.prismicPage ? (
-      "Hello world"
+      <PageTemplate data={prevData.prismicPage} />
     ) : (
       <div>error..</div>
     )
